@@ -184,7 +184,7 @@ holding export options."
 CONTENTS holds the contents of the headline.  INFO is a plist used
 as a communication channel."
   (let* ((title (org-export-data (org-element-property :title headline) info))
-         (from-date (or (org-element-property :FROM headline) (error "No FROM property provided for cventry %s" title)))
+         (from-date (org-element-property :FROM headline))
          (to-date (org-element-property :TO headline))
          (employer (org-element-property :EMPLOYER headline))
          (location (or (org-element-property :LOCATION headline) ""))
